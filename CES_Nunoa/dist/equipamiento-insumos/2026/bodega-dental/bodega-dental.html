@@ -1,0 +1,57 @@
+﻿<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bodega Dental 2026 · CES Ñuñoa</title><link rel="stylesheet" href="../../../campanas/style.css"><link rel="icon" type="image/png" href="../../../logo-nunoa-salud.png"><link href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist-sans/style.css" rel="stylesheet"></head><body><div class="shell"><aside class="side"><a href="../../../index.html" class="logo-link"><img class="institutional-logo" src="../../../logo-nunoa-salud.png" alt="Ñuñoa Salud" width="169" height="87"></a><div class="brand">CES Ñuñoa<br>Gestión operativa</div><small>Panel interno de coordinación</small><nav aria-label="Secciones"><a href="../../../index.html">Inicio</a><a href="../../../index.html#organigrama">Organigrama</a><a href="../../../index.html#areas">Áreas de trabajo</a><a href="../../../rutina-operativa/rutina-operativa.html">Rutina operativa</a><a href="../../../campanas/campanas.html">Campañas</a><a href="../../../equipamiento-insumos/equipamiento-insumos.html" aria-current="page">Equipamiento y bodegas</a><a href="../../../esterilizacion/esterilizacion.html">Esterilización</a><a href="../../../areas/areas.html">REAS</a><a href="../../../rrhh/rrhh.html">RRHH</a><a href="../../../calidad/calidad.html">calidad y protocolos</a></nav><div class="foot">Consultar los registros y documentos institucionales vigentes.</div></aside><main><div class="crumb"><a href="../../../index.html">Inicio</a> / <a href="../../equipamiento-insumos.html">Equipamiento y bodegas</a> / <a href="../2026.html">2026</a> / Bodega Dental</div><h1>Bodega Dental</h1><p class="intro">Control de insumos y materiales propios del área dental.</p><section class="group" aria-label="Planilla de Bodega Dental 2026"><div class="files"><a class="file" href="https://docs.google.com/spreadsheets/d/1xzIe5iSHOWNxkE_sowGorwUC_FQTALWd-uwxnqa4d2I/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"><div><strong>📎 Bodega Dental 2026</strong><span>Planilla de control de insumos y materiales del área dental.</span></div><b>Abrir planilla</b></a></div><p class="note">Consulta y actualiza los registros en la planilla. Los indicadores de esta página aún no están conectados a sus díatos.</p></section><section class="group" aria-label="Indicadores de bodega"><div class="grid"><article class="panel"><h2>Stock actual</h2><p><strong>Sin díatos vinculados</strong></p><p class="note">Existencias por insumo</p></article><article class="panel"><h2>Alertas de vencimiento</h2><p><strong>Sin díatos vinculados</strong></p><p class="note">Lotes vencidos o próximos a vencer</p></article><article class="panel"><h2>Stock crítico</h2><p><strong>Sin díatos vinculados</strong></p><p class="note">Insumos bajo el mínimo definido</p></article><article class="panel"><h2>Entradías</h2><p><strong>Sin díatos vinculados</strong></p><p class="note">Ingresos de insumos</p></article><article class="panel"><h2>Salidías</h2><p><strong>Sin díatos vinculados</strong></p><p class="note">Consumo y entregas</p></article><article class="panel"><h2>Última actualización</h2><p><strong>Sin díatos vinculados</strong></p><p class="note">Fecha del último registro</p></article></div></section><footer>CES Ñuñoa · Gestión operativa<br><span class="authorship">Autoría: Consuelo Galaz Clerc · Enfermera técnica y de calidad</span></footer></main></div><script>const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.metric, .card, .section, header.top, .executive, .table-scroll').forEach((el, i) => {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = `${(i % 4) * 80}ms`;
+    observer.observe(el);
+  });
+});</script><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const side = document.querySelector('.side');
+  if (!side) return;
+  
+  // Crear botón hamburguesa si no existe
+  if (!side.querySelector('.burger-btn')) {
+    const btn = document.createElement('button');
+    btn.className = 'burger-btn';
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    btn.setAttribute('aria-label', 'Menu');
+    
+    // Insertar después del logotipo o en la parte superior
+    const logo = side.querySelector('.institutional-logo');
+    if (logo) {
+      if (logo.parentElement.tagName.toLowerCase() === 'a') { logo.parentElement.insertAdjacentElement('afterend', btn); } else { logo.insertAdjacentElement('afterend', btn); }
+    } else {
+      side.prepend(btn);
+    }
+    
+    // Alternar menú
+    btn.addEventListener('click', () => {
+      side.classList.toggle('menu-open');
+    });
+  }
+  
+  // Colapsar al hacer scroll
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 1400) {
+      if (window.scrollY > 50) {
+        side.classList.add('collapsed');
+      } else {
+        side.classList.remove('collapsed');
+      }
+    }
+  });
+});
+</script>
+</body></html>
+
+
+

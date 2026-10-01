@@ -1,0 +1,58 @@
+﻿<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Campañas 2026 · CES Ñuñoa</title><meta name="description" content="Accesos a planillas de las campañas 2026 del CES Ñuñoa."><link rel="stylesheet" href="../style.css"><link rel="icon" type="image/png" href="../../logo-nunoa-salud.png"><link href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist-sans/style.css" rel="stylesheet"></head><body><div class="shell"><aside class="side"><a href="../../index.html" class="logo-link"><img class="institutional-logo" src="../../logo-nunoa-salud.png" alt="Ñuñoa Salud" width="169" height="87"></a><div class="brand">CES Ñuñoa<br>Gestión operativa</div><small>Panel interno de coordinación</small><nav aria-label="Secciones"><a href="../../index.html">Inicio</a><a href="../../index.html#organigrama">Organigrama</a><a href="../../index.html#areas">Áreas de trabajo</a><a href="../../rutina-operativa/rutina-operativa.html">Rutina operativa</a><a href="../../campanas/campanas.html" aria-current="page">Campañas</a><a href="../../equipamiento-insumos/equipamiento-insumos.html">Equipamiento y bodegas</a><a href="../../esterilizacion/esterilizacion.html">Esterilización</a><a href="../../areas/areas.html">REAS</a><a href="../../rrhh/rrhh.html">RRHH</a><a href="../../calidad/calidad.html">calidad y protocolos</a></nav><div class="foot">El acceso a cadía planilla depende de sus permisos en Google Drive.</div></aside><main><div class="crumb"><a href="../../index.html">Inicio</a> / <a href="../campanas.html">Campañas</a> / 2026</div><h1>Campañas 2026</h1><p class="intro">Planillas de programación, cobertura y seguimiento utilizadías por el CES. Cadía enlace abre el archivo original en Google Drive.</p><section class="group"><h2>Campaña escolar</h2><div class="files"><a class="file" href="https://docs.google.com/spreadsheets/d/1BgVMzBe6kbMpp6uRj_UmDi5SsvWhUuj0/edit" target="_blank" rel="noopener noreferrer"><div><strong>Campaña escolar 2026 · Dashboard institucional CES</strong><span>Planilla principal de la campaña escolar (.xlsm)</span></div><b>Abrir planilla <span class="icon-wrap">↗</span></b></a><a class="file" href="https://docs.google.com/spreadsheets/d/110__87_c9FuJMTFix9j7QOdPmEhIFAFY3WL6f-qXe_U/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"><div><strong>Rescate telefónico de alumnos pendientes SRP</strong><span>Registro y seguimiento de contacto</span></div><b>Abrir planilla <span class="icon-wrap">↗</span></b></a></div></section><section class="group"><h2>Influenza</h2><div class="files"><a class="file" href="https://docs.google.com/spreadsheets/d/1qBEO6njGRS-ZfUBUlpDsAUV1WN5cWQHAt3uvGzlC3AI/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"><div><strong>Campaña influenza 2026 · Dashboard institucional CES</strong><span>Seguimiento y cobertura por tipo de establecimiento</span></div><b>Abrir planilla <span class="icon-wrap">↗</span></b></a></div></section><section class="group"><h2>Registro y consolidíado</h2><div class="files"><a class="file" href="https://docs.google.com/spreadsheets/d/1G0SNHtjja6tPrspCh3aPD_6Nz4cPfH6tEAcIA5huewo/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"><div><strong>Registro y dashboard de dosis CES Ñuñoa 2026</strong><span>Registro de dosis y vista consolidíadía</span></div><b>Abrir planilla <span class="icon-wrap">↗</span></b></a></div></section><p class="note">Los permisos de las planillas permanecen en Drive. Si una persona no tiene acceso a un archivo, debe solicitarlo a su responsable.</p><footer>CES Ñuñoa · Gestión operativa<br><span class="authorship">Autoría: Consuelo Galaz Clerc · Enfermera técnica y de calidad</span></footer></main></div><script>const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.metric, .card, .section, header.top, .executive, .table-scroll').forEach((el, i) => {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = `${(i % 4) * 80}ms`;
+    observer.observe(el);
+  });
+});</script><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const side = document.querySelector('.side');
+  if (!side) return;
+  
+  // Crear botón hamburguesa si no existe
+  if (!side.querySelector('.burger-btn')) {
+    const btn = document.createElement('button');
+    btn.className = 'burger-btn';
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    btn.setAttribute('aria-label', 'Menu');
+    
+    // Insertar después del logotipo o en la parte superior
+    const logo = side.querySelector('.institutional-logo');
+    if (logo) {
+      if (logo.parentElement.tagName.toLowerCase() === 'a') { logo.parentElement.insertAdjacentElement('afterend', btn); } else { logo.insertAdjacentElement('afterend', btn); }
+    } else {
+      side.prepend(btn);
+    }
+    
+    // Alternar menú
+    btn.addEventListener('click', () => {
+      side.classList.toggle('menu-open');
+    });
+  }
+  
+  // Colapsar al hacer scroll
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 1400) {
+      if (window.scrollY > 50) {
+        side.classList.add('collapsed');
+      } else {
+        side.classList.remove('collapsed');
+      }
+    }
+  });
+});
+</script>
+</body></html>
+
+
+
+
